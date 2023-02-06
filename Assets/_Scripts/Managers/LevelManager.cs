@@ -102,7 +102,6 @@ public class LevelManager : Singleton<LevelManager>
     private IEnumerator ResetLevel()
     {
         Destroy(_ball);
-        Debug.Log(_brickList.Count);
         foreach (Brick brick in _brickList)
         {
             if (brick != null)

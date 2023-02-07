@@ -12,6 +12,7 @@ public class Ball : MonoBehaviour
     [SerializeField] GameObject _prefabImpactBubbleFX;
     [SerializeField] float _ySpacingFromPaddle = 1.4f;
     [SerializeField] float _scaleUpDuration = 0.2f;
+    [SerializeField] float _settingBallSpeedFactor = 1.0f;
     private PaddleManager _paddle;
     private BallState _ballState = BallState.Idle;
     private Vector3 _initialScaleFactor;
@@ -25,7 +26,7 @@ public class Ball : MonoBehaviour
 
     public void SetSpeed(float speed)
     {
-        _speed = speed;
+        _speed = speed * _settingBallSpeedFactor;
     }
 
     public void ThrowBall(Vector3 direction)

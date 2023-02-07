@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PaddleManager : Singleton<PaddleManager>
 {
@@ -8,12 +10,24 @@ public class PaddleManager : Singleton<PaddleManager>
     [SerializeField] private float x_maxPosition = 0.68f;
     [SerializeField] private float y_maxPosition = 0.2f;
     [SerializeField] private GameObject _lineIndicator;
+    [SerializeField] private float _lineIndicatorMultiplicator = 0.5f;
     private float _distanceToScreen;
     private Vector3 _posMove;
     private PaddleState _state = PaddleState.Idle;
     private Vector3 throwingVector;
+    private bool xrInputDown = false;
+    private bool xrInputUp = false;
 
+    [SerializeField] XRCustomGrabInteractable _customGrabInteractable;
+    UnityEvent OnGrab, OnDrop; 
     public Ball Ball { get => _ball; set => _ball = value; }
+    public float X_maxPosition { get => x_maxPosition; }
+
+    private void Start()
+    {
+        _customGrabInteractable.OnGrab += () => XRInputDown();
+        _customGrabInteractable.OnDrop += () => XRInputUp();
+    }
 
     public void ChangeState(PaddleState newState)
     {
@@ -52,7 +66,6 @@ public class PaddleManager : Singleton<PaddleManager>
 
     void LateUpdate()
     {
-
         switch (_state)
         {
             case PaddleState.Stop:
@@ -61,7 +74,7 @@ public class PaddleManager : Singleton<PaddleManager>
                 Moving();
                 break;
             case PaddleState.Waiting:
-                throwingVector = new Vector3(transform.position.x * 3f, 0.5f, 0).normalized / 2 - transform.position;
+                throwingVector = new Vector3(transform.position.x * 3f, 0.5f, 0).normalized * _lineIndicatorMultiplicator - transform.position;
                 Moving();
                 WaitingRelease();
                 break;
@@ -76,6 +89,7 @@ public class PaddleManager : Singleton<PaddleManager>
             default:
                 break;
         }
+        ResetXRInputs();
 
     }
 
@@ -132,6 +146,7 @@ public class PaddleManager : Singleton<PaddleManager>
         }
 
 #endif
+
     }
 
     private void WaitingRelease()
@@ -174,6 +189,20 @@ public class PaddleManager : Singleton<PaddleManager>
          
       }
 #endif
+        if (xrInputUp)
+        {
+            switch (_state)
+            {
+                case PaddleState.Waiting:
+                    ChangeState(PaddleState.ThrowBall);
+                    break;
+                case PaddleState.Active:
+                    ChangeState(PaddleState.SoftPause);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     private void WaitingUnrelease()
@@ -191,11 +220,29 @@ public class PaddleManager : Singleton<PaddleManager>
         ChangeState(PaddleState.Active);       
       }
 #endif
+        if (xrInputDown)
+        {
+            ChangeState(PaddleState.Active);
+        }
     }
 
-    private bool isInScreen(Vector2 inputPosition)
+    public bool isInScreen(Vector2 inputPosition)
     {
         return ((inputPosition.x <= x_maxPosition && inputPosition.x >= -x_maxPosition) && inputPosition.y < y_maxPosition) ? true : false;
+    }
+
+    private void XRInputDown()
+    {
+        xrInputDown = true;
+    }
+    private void XRInputUp()
+    {
+        xrInputUp = true;
+    }
+    private void ResetXRInputs()
+    {
+        xrInputDown = false;
+        xrInputUp = false;
     }
 
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class RaycastReflection : MonoBehaviour
 {
     [SerializeField] private Transform _paddleTransform;
+    [SerializeField] private float multiplicator = 0.5f;
     public int reflections;
     public float maxLegth;
 
@@ -21,7 +22,7 @@ public class RaycastReflection : MonoBehaviour
 
     private void Update()
     {
-        ray = new Ray(_paddleTransform.position, new Vector3(_paddleTransform.position.x * 3f, 0.5f, 0).normalized / 2 - _paddleTransform.position);
+        ray = new Ray(_paddleTransform.position, new Vector3(_paddleTransform.position.x * 3f, 0.5f, 0).normalized * multiplicator - _paddleTransform.position);
 
         lineRenderer.positionCount = 1;
         lineRenderer.SetPosition(0, _paddleTransform.position);

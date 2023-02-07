@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4346747, g: 0.48168886, b: 0.56261396, a: 1}
+  m_IndirectSpecularColor: {r: 0.15847932, g: 0.1974824, b: 0.2766402, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1955,6 +1955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _paddleTransform: {fileID: 1192199514}
+  multiplicator: 0.5
   reflections: 3
   maxLegth: 1
 --- !u!120 &541858386
@@ -3957,6 +3958,8 @@ MonoBehaviour:
   x_maxPosition: 0.34
   y_maxPosition: 0.5
   _lineIndicator: {fileID: 541858383}
+  _lineIndicatorMultiplicator: 0.5
+  _customGrabInteractable: {fileID: 0}
 --- !u!1 &1241254772
 GameObject:
   m_ObjectHideFlags: 0

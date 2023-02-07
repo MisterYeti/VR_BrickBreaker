@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237416850364934237}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1e4a8735602c70548945e2aba460f0de, type: 2}
+  - {fileID: 2100000, guid: b8ccd2b0df20fe9409b976279d48004d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   _prefabImpactBubbleFX: {fileID: 8495118995342457964, guid: a5135eb7ae0ea634ea1664dfb146395b, type: 3}
   _ySpacingFromPaddle: 1.4
   _scaleUpDuration: 0.2
+  _settingBallSpeedFactor: 1
 --- !u!54 &1237416850364934180
 Rigidbody:
   m_ObjectHideFlags: 0

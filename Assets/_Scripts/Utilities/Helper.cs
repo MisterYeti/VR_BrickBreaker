@@ -9,4 +9,9 @@ public static class Helper
     {
         foreach (Transform chil in t) GameObject.Destroy(chil.gameObject);
     }
+
+    public static void QuiApplication()
+    {
+        Application.Quit();
+    }
 }

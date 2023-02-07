@@ -81,7 +81,7 @@ public class UIManager : Singleton<UIManager>
 
     private void QuitLevel()
     {
-
+        Helper.QuiApplication();
     }
 
     public void SetScoreText(string strTotalScore, string strAddedScore, Color color)

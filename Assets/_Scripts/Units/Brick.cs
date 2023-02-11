@@ -12,6 +12,7 @@ public class Brick : MonoBehaviour
     private Collider _collider = null;
     private BrickEffect _brickEffect;
     private float _score;
+    private bool _isDestroyed = false;
 
 
     public IEnumerator Setup(ScriptableBrick brickData)
@@ -57,16 +58,19 @@ public class Brick : MonoBehaviour
     }
 
     public IEnumerator Destroy(float destroyDuration, bool checkEndGame = true)
-    {
-        if (checkEndGame)
+    {   if (!_isDestroyed)
         {
-            LevelManager.Instance.AddDestroyedBrick();
+            _isDestroyed = true;
+            if (checkEndGame)
+            {
+                LevelManager.Instance.AddDestroyedBrick();
+            }
+            PlayFX();
+            yield return 0.2f;
+            _collider.enabled = false;
+            yield return Scale(destroyDuration, false);
+            Destroy(gameObject);
         }
-        PlayFX();
-        yield return 0.2f;
-        _collider.enabled = false;
-        yield return Scale(destroyDuration, false);
-        Destroy(gameObject);
     }
 
 

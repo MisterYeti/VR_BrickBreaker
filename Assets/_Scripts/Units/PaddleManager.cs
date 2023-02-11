@@ -25,8 +25,11 @@ public class PaddleManager : Singleton<PaddleManager>
 
     private void Start()
     {
-        _customGrabInteractable.OnGrab += () => XRInputDown();
-        _customGrabInteractable.OnDrop += () => XRInputUp();
+        if (_customGrabInteractable != null)
+        {
+            _customGrabInteractable.OnGrab += () => XRInputDown();
+            _customGrabInteractable.OnDrop += () => XRInputUp();
+        }
     }
 
     public void ChangeState(PaddleState newState)

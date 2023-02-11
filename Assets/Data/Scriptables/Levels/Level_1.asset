@@ -15,61 +15,61 @@ MonoBehaviour:
   bricks:
     rows:
     - row:
+      - {fileID: 11400000, guid: a9e287695dd8ce048ae0729f4f8fbe99, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 11400000, guid: a9e287695dd8ce048ae0729f4f8fbe99, type: 2}
+    - row:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+    - row:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 11400000, guid: 16df681e22ddbb04daa42026eb47b127, type: 2}
+      - {fileID: 0}
+      - {fileID: 11400000, guid: 16df681e22ddbb04daa42026eb47b127, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+    - row:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 11400000, guid: f2af60241558fdf4382c12c23e5208b4, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+    - row:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 11400000, guid: f2af60241558fdf4382c12c23e5208b4, type: 2}
+      - {fileID: 11400000, guid: 7accf59cc6da51d44a58b838724b6b9d, type: 2}
+      - {fileID: 11400000, guid: f2af60241558fdf4382c12c23e5208b4, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+    - row:
+      - {fileID: 0}
       - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
       - {fileID: 0}
       - {fileID: 0}
       - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
-    - row:
-      - {fileID: 0}
-      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
-      - {fileID: 0}
-    - row:
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 11400000, guid: f2af60241558fdf4382c12c23e5208b4, type: 2}
-      - {fileID: 0}
-      - {fileID: 11400000, guid: f2af60241558fdf4382c12c23e5208b4, type: 2}
-      - {fileID: 0}
-      - {fileID: 0}
-    - row:
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 11400000, guid: f2af60241558fdf4382c12c23e5208b4, type: 2}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-    - row:
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 11400000, guid: f2af60241558fdf4382c12c23e5208b4, type: 2}
-      - {fileID: 0}
-      - {fileID: 11400000, guid: f2af60241558fdf4382c12c23e5208b4, type: 2}
-      - {fileID: 0}
-      - {fileID: 0}
-    - row:
-      - {fileID: 0}
-      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
-      - {fileID: 0}
-    - row:
       - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
       - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
+    - row:
       - {fileID: 0}
       - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 0}
   levelDifficulty:
     level: 1
     speed: 1

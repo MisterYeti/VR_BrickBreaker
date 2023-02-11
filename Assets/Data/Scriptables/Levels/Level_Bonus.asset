@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e9495aced3c7a4fb5c9314e41a0d7a, type: 3}
+  m_Name: Level_Bonus
+  m_EditorClassIdentifier: 
+  bricks:
+    rows:
+    - row:
+      - {fileID: 11400000, guid: 7accf59cc6da51d44a58b838724b6b9d, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 11400000, guid: 1585ac1c127051446aed165f28442fe4, type: 2}
+      - {fileID: 11400000, guid: ce4c6d0207c982845a1b4d2450fa17c5, type: 2}
+    - row:
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 7accf59cc6da51d44a58b838724b6b9d, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 11400000, guid: 1585ac1c127051446aed165f28442fe4, type: 2}
+    - row:
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 7accf59cc6da51d44a58b838724b6b9d, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+    - row:
+      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 7accf59cc6da51d44a58b838724b6b9d, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
+    - row:
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 7accf59cc6da51d44a58b838724b6b9d, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+    - row:
+      - {fileID: 11400000, guid: 1585ac1c127051446aed165f28442fe4, type: 2}
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 7accf59cc6da51d44a58b838724b6b9d, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+    - row:
+      - {fileID: 11400000, guid: ce4c6d0207c982845a1b4d2450fa17c5, type: 2}
+      - {fileID: 11400000, guid: 1585ac1c127051446aed165f28442fe4, type: 2}
+      - {fileID: 11400000, guid: 7465ccc7da778764dbbf1ad60c198beb, type: 2}
+      - {fileID: 11400000, guid: 64ce2d2cd3a5c134bb6b236ac660951e, type: 2}
+      - {fileID: 11400000, guid: 8a924c7caffec8f4d8cd321e1855cf68, type: 2}
+      - {fileID: 11400000, guid: adc57c23a088bc14086c81846ed6fb3e, type: 2}
+      - {fileID: 11400000, guid: 7accf59cc6da51d44a58b838724b6b9d, type: 2}
+  levelDifficulty:
+    level: BONUS
+    speed: 1.3

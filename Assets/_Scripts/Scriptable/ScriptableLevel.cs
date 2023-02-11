@@ -16,6 +16,6 @@ public class ScriptableLevel : ScriptableObject
 [Serializable]
 public struct LevelDifficulty
 {
-    public int level;
+    public string level;
     public float speed;
 }

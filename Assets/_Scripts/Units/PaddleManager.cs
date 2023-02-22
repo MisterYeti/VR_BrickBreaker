@@ -17,6 +17,7 @@ public class PaddleManager : Singleton<PaddleManager>
     private Vector3 throwingVector;
     private bool xrInputDown = false;
     private bool xrInputUp = false;
+    private float initialFixedDeltaTime;
 
     [SerializeField] XRCustomGrabInteractable _customGrabInteractable;
     UnityEvent OnGrab, OnDrop; 
@@ -25,6 +26,7 @@ public class PaddleManager : Singleton<PaddleManager>
 
     private void Start()
     {
+        initialFixedDeltaTime = Time.fixedDeltaTime;
         if (_customGrabInteractable != null)
         {
             _customGrabInteractable.OnGrab += () => XRInputDown();
@@ -64,6 +66,7 @@ public class PaddleManager : Singleton<PaddleManager>
         }
 
         Debug.Log($"New Paddle state: {newState}");
+        Time.fixedDeltaTime = initialFixedDeltaTime * Time.timeScale;
     }
 
 

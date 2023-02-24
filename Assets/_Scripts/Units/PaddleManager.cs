@@ -54,19 +54,23 @@ public class PaddleManager : Singleton<PaddleManager>
                 break;
             case PaddleState.Active:
                 Time.timeScale = 1.0f;
+                Time.fixedDeltaTime = initialFixedDeltaTime * Time.timeScale;
+
                 break;
             case PaddleState.SoftPause:
                 Time.timeScale = 0.25f;
+                Time.fixedDeltaTime = initialFixedDeltaTime * Time.timeScale;
                 break;
             case PaddleState.Stop:
                 Time.timeScale = 0.0f;
+                Time.fixedDeltaTime = initialFixedDeltaTime * Time.timeScale;
                 break;
             default:
                 break;
         }
 
         Debug.Log($"New Paddle state: {newState}");
-        Time.fixedDeltaTime = initialFixedDeltaTime * Time.timeScale;
+        
     }
 
 

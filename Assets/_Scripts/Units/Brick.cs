@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
-    private Renderer _renderer;
+    [SerializeField] private Renderer _renderer;
     private Vector3 _initialScaleFactor;
     private float _scaleDuration;
     private float _scaleDeathDuration = 0.2f;
@@ -17,10 +17,9 @@ public class Brick : MonoBehaviour
 
     public IEnumerator Setup(ScriptableBrick brickData)
     {         
-        _renderer = GetComponent<Renderer>();
         _collider = GetComponent<Collider>();
-        _initialScaleFactor = transform.localScale;
-        transform.localScale = Vector3.zero;
+        _initialScaleFactor = _renderer.transform.localScale;
+        _renderer.transform.localScale = Vector3.zero;
         _renderer.material = brickData.Material;
         _fxPrefab = brickData.PrefabVisualEffect;
         _brickEffect = brickData.BrickEffect;
@@ -66,9 +65,9 @@ public class Brick : MonoBehaviour
                 LevelManager.Instance.AddDestroyedBrick();
             }
             PlayFX();
-            yield return 0.2f;
+            StartCoroutine(Scale(destroyDuration, false));
+            yield return new WaitForSeconds(0.1f);          
             _collider.enabled = false;
-            yield return Scale(destroyDuration, false);
             Destroy(gameObject);
         }
     }
@@ -76,7 +75,7 @@ public class Brick : MonoBehaviour
 
     private IEnumerator Scale(float duration, bool up)
     {
-        Transform transform = this.transform;
+        Transform transform = _renderer.transform;
         var currentTime = 0f;
 
         float startValueX, startValueY, startValueZ;
